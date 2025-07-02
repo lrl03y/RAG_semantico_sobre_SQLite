@@ -1,13 +1,22 @@
 
-# Proyecto RAG Semántico - Estructura SQLite
+# Proyecto RAG Semántico - Estructura + Importación desde Access
 
-Este paquete contiene:
+## Contenido:
+- `crear_estructura.py`: crea la base de datos SQLite (`mibd.sqlite`) con la estructura limpia.
+- `importar_desde_access.py`: importa datos desde tu archivo `.accdb` a las tablas correspondientes.
 
-- `crear_estructura.py`: script que crea la base de datos `mibd.sqlite` con la estructura relacional limpia.
-- Recomendación: Ejecutar este script antes de importar datos desde Access.
+## Requisitos:
+- Tener instalado el driver ODBC de Access (Microsoft Access Database Engine)
+- Instalar pyodbc: `pip install pyodbc`
 
-## Uso
+## Uso:
 
+1. Ejecuta primero:
 ```bash
 python crear_estructura.py
+```
+
+2. Luego importa los datos:
+```bash
+python importar_desde_access.py
 ```
